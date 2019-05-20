@@ -1,0 +1,32 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <AcrylicBrush x:Key="TopBarBackgroundColor"
+                BackgroundSource="Backdrop"
+                TintColor="#FF232323"
+                TintOpacity="0.7"
+                FallbackColor="#FF232323"/>
+
+    <AcrylicBrush x:Key="NavPanelBackgroundColor"
+                BackgroundSource="Backdrop"
+                TintColor="#FF282828"
+                TintOpacity="0.5"
+                FallbackColor="#FF282828"/>
+
+    <AcrylicBrush x:Key="RefreshButtonColor"
+                  BackgroundSource="Backdrop"
+                  TintColor="#FF00AEFF"
+                  TintOpacity="0.5"
+                  FallbackColor="#FF00AEFF"/>
+
+
+    <SolidColorBrush x:Key="TopBarTextColor" 
+                                Color="White"/>
+    <SolidColorBrush x:Key="NavViewFontIconColor"
+                                Color="LightGray"/>
+    <SolidColorBrush x:Key="NavViewTextColor"
+                                Color="White"/>
+
+
+</ResourceDictionary>

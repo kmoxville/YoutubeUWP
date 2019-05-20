@@ -1,0 +1,155 @@
+﻿<UserControl
+    x:Class="YoutubeUWP.AccountPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YoutubeUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="64"
+    d:DesignWidth="220">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light" Source="Themes/Light.xaml"/>
+                <ResourceDictionary x:Key="Dark" Source="Themes/Dark.xaml"/>
+            </ResourceDictionary.ThemeDictionaries>
+            
+            <Style x:Key="FlyoutButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="#FF00AEFF"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderBrush}"/>
+                <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+                <Setter Property="Padding" Value="8,2,8,2"/>
+                <Setter Property="Margin" Value="0,0,4,4"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+                <Setter Property="FontWeight" Value="Normal"/>
+                <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+                <Setter Property="UseSystemFocusVisuals" Value="True"/>
+                <Setter Property="FocusVisualMargin" Value="-3"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <Storyboard>
+                                                <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="PointerOver">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundPointerOver}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushPointerOver}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundPointerOver}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundPressed}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushPressed}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundPressed}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Disabled">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBackgroundDisabled}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonBorderBrushDisabled}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonForegroundDisabled}"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentTransitions="{TemplateBinding ContentTransitions}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <local:InvertedBooleanConverter x:Key="InvertedBooleanConverter"/>
+            <local:BooleanConverter x:Key="BooleanConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Margin="0,0,0,8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <FontIcon FontFamily="ms-appx:///Assets/material.ttf#Material Icons"
+                                          Glyph="&#xe853;"
+							              FontSize="48"
+							              Foreground="{ThemeResource NavViewFontIconColor}"/>
+        <Grid Grid.Column="1"
+              Visibility="{x:Bind IsAuthorized, Converter={StaticResource BooleanConverter}, Mode=OneWay}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="UserName" Grid.ColumnSpan="2"
+                       VerticalAlignment="Center"
+                       Foreground="{ThemeResource NavViewTextColor}"
+                       Text="Name Surname"/>
+            <Button x:Name="SwitchAccountButton" Grid.Row="1"
+                                            Style="{StaticResource FlyoutButtonStyle}"
+                                            Content="Switch" Click="SwitchButton_Click"/>
+            <Button x:Name="LogoutButton" Grid.Row="1" Grid.Column="1"
+                                            Style="{StaticResource FlyoutButtonStyle}"
+                                            Content="Logout" Click="LogoutButton_Click"/>
+        </Grid>
+
+        <Grid Grid.Column="1"
+              Visibility="{x:Bind IsAuthorized, Mode=OneWay, Converter={StaticResource InvertedBooleanConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.ColumnSpan="2"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Log in to manage subscriptions"
+                       TextWrapping="Wrap"
+                       Foreground="{ThemeResource NavViewTextColor}"
+                       Margin="8,4,16,4"/>
+            <Button x:Name="LoginButton" Grid.Row="1" Grid.ColumnSpan="2"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Style="{StaticResource FlyoutButtonStyle}"
+                    
+                    Content="Login" Click="LoginButton_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

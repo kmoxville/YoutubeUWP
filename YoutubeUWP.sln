@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeUWP", "YoutubeUWP\YoutubeUWP.csproj", "{841A35D4-EED2-41CA-9128-0376E3977690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeApi", "YoutubeApi\YoutubeApi.csproj", "{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|ARM.ActiveCfg = Debug|ARM
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|ARM.Build.0 = Debug|ARM
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|ARM.Deploy.0 = Debug|ARM
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|x64.ActiveCfg = Debug|x64
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|x64.Build.0 = Debug|x64
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|x64.Deploy.0 = Debug|x64
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|x86.ActiveCfg = Debug|x86
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|x86.Build.0 = Debug|x86
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Debug|x86.Deploy.0 = Debug|x86
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|Any CPU.ActiveCfg = Release|x86
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|ARM.ActiveCfg = Release|ARM
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|ARM.Build.0 = Release|ARM
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|ARM.Deploy.0 = Release|ARM
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|x64.ActiveCfg = Release|x64
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|x64.Build.0 = Release|x64
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|x64.Deploy.0 = Release|x64
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|x86.ActiveCfg = Release|x86
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|x86.Build.0 = Release|x86
+		{841A35D4-EED2-41CA-9128-0376E3977690}.Release|x86.Deploy.0 = Release|x86
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|ARM.ActiveCfg = Debug|ARM
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|ARM.Build.0 = Debug|ARM
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|x64.ActiveCfg = Debug|x64
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|x64.Build.0 = Debug|x64
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|x86.ActiveCfg = Debug|x86
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Debug|x86.Build.0 = Debug|x86
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|ARM.ActiveCfg = Release|ARM
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|ARM.Build.0 = Release|ARM
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|x64.ActiveCfg = Release|x64
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|x64.Build.0 = Release|x64
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|x86.ActiveCfg = Release|x86
+		{7DBFFFA9-E601-4CCA-839A-67330AFF06FA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {311395FD-B479-4094-82B8-EE474F5DCBC1}
+	EndGlobalSection
+EndGlobal
